@@ -1,0 +1,393 @@
+/* Общие стили для админ-панели */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+/* Навигация */
+.main-nav {
+    background-color: #2c3e50;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.main-nav .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin-right: 1.5rem;
+}
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav-links a:hover {
+    background-color: #34495e;
+}
+.nav-links a.active {
+    background-color: #3498db;
+}
+.nav-right {
+    margin-left: auto;
+}
+.nav-right a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav-right a:hover {
+    background-color: #34495e;
+}
+/* Основной контент */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+main h1 {
+    color: #343a40;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 1rem;
+}
+/* Формы */
+.admin-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 2rem;
+}
+.admin-section h2 {
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #495057;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.form-text {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+/* Кнопки */
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+th {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+tr:hover {
+    background-color: #e2e6ea;
+}
+/* Сообщения об ошибках и успехе */
+.errors {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+.errors .error {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;  
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+/* Действия в таблице */
+.action-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+.action-links a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s ease-in-out;
+}
+.action-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.action-links a.btn-primary {
+    background-color: #28a745; /* Зеленый для основной кнопки */
+    color: white;
+}
+.action-links a.btn-primary:hover {
+    background-color: #218838;
+}
+.action-links a.btn-secondary {
+     /* Оставляем этот стиль для кнопок вроде "Вернуться к списку" */
+     background-color: #007bff; /* Синий */
+     color: white;
+     padding: 8px 15px;
+     border-radius: 4px;
+     text-align: center;
+     transition: background-color 0.2s ease;
+}
+.action-links a.btn-secondary:hover {
+     background-color: #0056b3; /* Более темный синий при наведении */
+}
+.action-links a:last-child {
+    /* Этот стиль делает последнюю кнопку (Удалить) красной */
+    color: white; /* Текст белый */
+    background-color: #e74c3c; /* Красный фон */
+}
+.action-links a:last-child:hover {
+    background-color: #c0392b; /* Более темный красный при наведении */
+}
+/* Изображения в таблице */
+table img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+/* Чекбоксы */
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    .nav-right {
+        margin: 1rem 0;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    .admin-section {
+        padding: 1.5rem;
+    }
+    .admin-section form .btn-primary,
+    .admin-section form .btn-secondary {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    .admin-section form .btn-secondary:last-child {
+        margin-bottom: 0;
+    }
+    .admin-section p strong {
+        display: block;
+        width: auto;
+        margin-bottom: 0.5rem;
+    }
+}
+.admin-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.dashboard-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dashboard-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.dashboard-card h3 a {
+    text-decoration: none;
+    color: #007bff;
+}
+.dashboard-card p {
+    font-size: 14px;
+    color: #555;
+}
+/* Дополнительные стили для таблиц в админке (будут добавлены позже) */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.action-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+.action-links a:hover {
+    text-decoration: underline;
+}
+/* Стиль для активного пункта меню в админке */
+.main-nav .nav-links li a.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+/* Стили для формы в админ-панели (например, edit_user.php) */
+.admin-section form .form-group {
+    margin-bottom: 1.5rem;
+}
+.admin-section form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #495057;
+}
+.admin-section form input[type="text"],
+.admin-section form input[type="tel"],
+.admin-section form input[type="email"],
+.admin-section form input[type="password"],
+.admin-section form textarea,
+.admin-section form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.admin-section form input[type="text"]:focus,
+.admin-section form input[type="tel"]:focus,
+.admin-section form input[type="email"]:focus,
+.admin-section form input[type="password"]:focus,
+.admin-section form textarea:focus,
+.admin-section form select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.admin-section form input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+.admin-section form .btn-primary,
+.admin-section form .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    margin-right: 1rem; /* Отступ между кнопками */
+}
+.admin-section form .btn-primary {
+    background-color: #28a745; /* Зеленая кнопка для сохранения */
+    color: white;
+}
+.admin-section form .btn-primary:hover {
+    background-color: #218838;
+}
+.admin-section form .btn-secondary {
+    background-color: #dc3545; /* Красная кнопка для отмены/удаления */
+    color: white;
+}
+.admin-section form .btn-secondary:hover {
+    background-color: #c82333;
+}
+/* Стили для информации пользователя в view_user.php */
+.admin-section p strong {
+    display: inline-block;
+    width: 150px; /* Фиксированная ширина для заголовков */
+    margin-right: 10px;
+    color: #343a40;
+} 

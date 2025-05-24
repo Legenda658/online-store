@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /catalog.php
+Allow: /about.php
+Allow: /contact.php
+Allow: /auth/login.php
+Allow: /auth/register.php
+
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /assets/
+Disallow: /includes/
+Disallow: /vendor/
+Disallow: /config/
+Disallow: /logs/
+Disallow: /temp/
+Disallow: /uploads/
+Disallow: /backup/
+
+Sitemap: https://analeg.ru/sitemap.xml 
